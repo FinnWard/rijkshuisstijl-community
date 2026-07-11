@@ -7,7 +7,7 @@
 
 .rhc-card {
   @include mixin.rhc-card;
-  .utrecht-img:not(img[width]) {
+  & :where(.utrecht-img:not(img[width])) {
     block-size: 100%;
     inline-size: 100%;
   }
@@ -37,23 +37,23 @@
   @include mixin.rhc-card__link;
 }
 
-.rhc-card:active .rhc-card__heading {
+:where(.rhc-card:active) .rhc-card__heading {
   @include mixin.rhc-card__heading--active;
 }
-.rhc-card:focus .rhc-card__heading {
+:where(.rhc-card:focus) .rhc-card__heading {
   @include mixin.rhc-card__heading--active;
 }
-.rhc-card:hover .rhc-card__heading {
+:where(.rhc-card:hover) .rhc-card__heading {
   @include mixin.rhc-card__heading--active;
 }
 
-.rhc-card:active .rhc-card__link {
+:where(.rhc-card:active) .rhc-card__link {
   @include mixin.rhc-card__link--active;
 }
-.rhc-card:focus .rhc-card__link {
+:where(.rhc-card:focus) .rhc-card__link {
   @include mixin.rhc-card__link--focus;
 }
-.rhc-card:hover .rhc-card__link {
+:where(.rhc-card:hover) .rhc-card__link {
   @include mixin.rhc-card__link--hover;
 }
 

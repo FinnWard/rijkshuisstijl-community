@@ -4,8 +4,12 @@
  */
 
 @use "mixin";
-@forward "@utrecht/alert-css/dist/index.css";
-@forward "@utrecht/icon-css/dist/index.css";
+@use "sass:meta";
+
+@layer rhc-upstream {
+  @include meta.load-css("@utrecht/alert-css/dist/index.css");
+  @include meta.load-css("@utrecht/icon-css/dist/index.css");
+}
 
 .rhc-alert {
   @include mixin.rhc-alert;

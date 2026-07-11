@@ -4,25 +4,25 @@
  */
 
 .rhc-link-list {
-  .utrecht-link-list__link {
+  & :where(.utrecht-link-list__link) {
     align-items: flex-start;
-
-    .utrecht-icon {
-      align-items: center;
-      block-size: 1lh;
-      display: flex;
-      flex-shrink: 0;
-      position: static;
-    }
   }
 
-  .utrecht-link-list__item {
+  & :where(.utrecht-link-list__link) :where(.utrecht-icon) {
+    align-items: center;
+    block-size: 1lh;
+    display: flex;
+    flex-shrink: 0;
+    position: static;
+  }
+
+  & :where(.utrecht-link-list__item) {
     display: inline-flex;
     font-family: var(--rhc-text-font-family-default, inherit);
     font-size: var(--utrecht-link-list-item-font-size, inherit);
   }
 
-  .utrecht-link-list__item .utrecht-link:any-link {
+  & :where(.utrecht-link-list__item) :where(.utrecht-link:any-link) {
     line-height: var(--rhc-text-line-height-md, inherit);
   }
 }

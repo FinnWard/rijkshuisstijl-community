@@ -4,32 +4,35 @@
  */
 @use "mixin";
 
-.rhc-checkbox.utrecht-checkbox,
-.rhc-form-field-checkbox-option .utrecht-checkbox {
+.rhc-checkbox:where(.utrecht-checkbox),
+.rhc-form-field-checkbox-option :where(.utrecht-checkbox) {
   margin-block-start: var(--rhc-space-sm);
-  &--disabled {
-    @include mixin.rhc-checkbox--disabled;
-  }
-  &--invalid {
-    @include mixin.rhc-checkbox--invalid;
-  }
 }
-.rhc-form-field-checkbox-option .utrecht-form-label--checkbox {
+.rhc-checkbox:where(.utrecht-checkbox--disabled),
+.rhc-form-field-checkbox-option :where(.utrecht-checkbox--disabled) {
+  @include mixin.rhc-checkbox--disabled;
+}
+.rhc-checkbox:where(.utrecht-checkbox--invalid),
+.rhc-form-field-checkbox-option :where(.utrecht-checkbox--invalid) {
+  @include mixin.rhc-checkbox--invalid;
+}
+.rhc-form-field-checkbox-option :where(.utrecht-form-label--checkbox) {
   @include mixin.rhc-checkbox-label--checkbox;
 }
-.rhc-form-field-checkbox-option .utrecht-form-label--checkbox .utrecht-checkbox--custom {
+.rhc-form-field-checkbox-option :where(.utrecht-form-label--checkbox) :where(.utrecht-checkbox--custom) {
   @include mixin.rhc-checkbox-label--checkbox-label;
 }
-.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input,
-.rhc-checkbox.utrecht-custom-checkbox--html-input,
-.rhc-form-field-checkbox-option .utrecht-checkbox--custom.utrecht-checkbox--html-input {
+.rhc-checkbox:where(.utrecht-checkbox--custom.utrecht-checkbox--html-input),
+.rhc-checkbox:where(.utrecht-custom-checkbox--html-input),
+.rhc-form-field-checkbox-option :where(.utrecht-checkbox--custom.utrecht-checkbox--html-input) {
   @include mixin.rhc-custom-checkbox--html-input;
 }
-.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate,
-.rhc-form-field-checkbox-option .utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
+.rhc-checkbox:where(.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate),
+.rhc-form-field-checkbox-option :where(.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate) {
   @include mixin.rhc-checkbox--indeterminate;
 }
-.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover,
-.rhc-form-field-checkbox-option .utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
+.rhc-checkbox:where(.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover),
+.rhc-form-field-checkbox-option
+  :where(.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover) {
   @include mixin.rhc-checkbox--invalid;
 }

@@ -33,13 +33,13 @@ const getSpacingMixins = (components) =>
     const prefix = mixinGroup[0].prefix;
 
     const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
-      return `.${component}:has(+ .${sibling}) {
+      return `:where(.${component}:has(+ .${sibling})) {
   --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
 }`;
     });
 
     return `@mixin ${componentName} {
-  .${componentName}:first-child {
+  :where(.${componentName}:first-child) {
     --${prefix}-margin-block-start: 0;
   }
   ${mixins.join('\n  ')}

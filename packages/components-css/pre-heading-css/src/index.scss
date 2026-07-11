@@ -14,6 +14,6 @@
   grid-area: preheading;
 }
 
-.rhc-heading-container > *:not(.rhc-pre-heading) {
+.rhc-heading-container > :where(*:not(.rhc-pre-heading)) {
   grid-area: heading;
 }

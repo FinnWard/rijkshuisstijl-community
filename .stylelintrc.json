@@ -123,5 +123,13 @@
     "unit-disallowed-list": [["s"]],
     "unit-no-unknown": [true],
     "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["packages/components-css/**/*.scss"],
+      "rules": {
+        "selector-max-specificity": ["0,1,0", { "ignoreSelectors": ["/^::/"] }]
+      }
+    }
+  ]
 }

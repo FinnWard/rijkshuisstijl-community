@@ -9,7 +9,7 @@
   @include mixin.rhc-radio-group;
 }
 .rhc-form-field {
-  .utrecht-form-label {
+  & :where(.utrecht-form-label) {
     line-height: var(--rhc-text-line-height-md, inherit);
   }
 }

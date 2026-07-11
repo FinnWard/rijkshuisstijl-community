@@ -3,5 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@forward "@utrecht/accordion-css/dist/index.css";
-@forward "@utrecht/button-css/dist/index.css";
+@use "sass:meta";
+
+@layer rhc-upstream {
+  @include meta.load-css("@utrecht/accordion-css/dist/index.css");
+  @include meta.load-css("@utrecht/button-css/dist/index.css");
+}

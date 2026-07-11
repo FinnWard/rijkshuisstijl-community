@@ -3,8 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "@nl-design-system-candidate/number-badge-css/dist/number-badge.css";
+@use "sass:meta";
 
-.rhc-number-badge.nl-number-badge {
+@layer rhc-upstream {
+  @include meta.load-css("@nl-design-system-candidate/number-badge-css/dist/number-badge.css");
+}
+
+.rhc-number-badge:where(.nl-number-badge) {
   box-sizing: content-box;
 }

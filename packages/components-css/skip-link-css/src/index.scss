@@ -3,4 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "@nl-design-system-candidate/skip-link-css/dist/skip-link.css";
+@use "sass:meta";
+
+@layer rhc-upstream {
+  @include meta.load-css("@nl-design-system-candidate/skip-link-css/dist/skip-link.css");
+}

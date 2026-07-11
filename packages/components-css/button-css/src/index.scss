@@ -9,6 +9,6 @@
   @include mixin.rhc-button--icon-only;
 }
 
-.rhc-button--icon-only .rhc-button__sr-only {
+:where(.rhc-button--icon-only) .rhc-button__sr-only {
   @include mixin.invisible-but-accessible;
 }

@@ -28,7 +28,7 @@
   --utrecht-page-footer-content-color: inherit;
 }
 
-.rhc-page-footer--primary-filled.rhc-page-footer--subfooter {
+.rhc-page-footer--primary-filled:where(.rhc-page-footer--subfooter) {
   border-block-start-color: var(--rhc-page-footer-border-block-start-color);
   border-block-start-style: var(--rhc-page-footer-border-block-start-style);
   border-block-start-width: var(--rhc-page-footer-border-block-start-width);
@@ -61,7 +61,7 @@
   flex: 1;
   flex-direction: row;
 
-  :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
+  :where(&) :is(.rhc-heading, .rhc-paragraph):where(h1, h2, h3, h4, h5, h6, p) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }

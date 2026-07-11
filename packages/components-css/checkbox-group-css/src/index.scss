@@ -10,7 +10,7 @@
   padding-block-start: var(--rhc-checkbox-group-padding-block-start);
   row-gap: var(--rhc-checkbox-group-row-gap);
 
-  .utrecht-checkbox {
+  & :where(.utrecht-checkbox) {
     align-self: baseline;
     line-height: var(--rhc-text-line-height-md, inherit);
   }

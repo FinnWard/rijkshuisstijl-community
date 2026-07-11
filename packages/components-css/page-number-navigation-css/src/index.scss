@@ -3,5 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "@amsterdam/design-system-css/dist/pagination/pagination.css";
-@use "@amsterdam/design-system-css/dist/visually-hidden/visually-hidden.css";
+@use "sass:meta";
+
+@layer rhc-upstream {
+  @include meta.load-css("@amsterdam/design-system-css/dist/pagination/pagination.css");
+  @include meta.load-css("@amsterdam/design-system-css/dist/visually-hidden/visually-hidden.css");
+}
