@@ -40,6 +40,34 @@ Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community token
    </body>
    ```
 
+## Alleen de tokens laden die je gebruikt (chunks)
+
+Naast het volledige `index.css` (±2000 custom properties) worden de tokens ook opgeknipt geleverd in
+`dist/tokens/` (en `dist/<thema naam>/tokens/` per thema):
+
+- `tokens/brand.css` — de brand-primitieven (kleurpaletten, maten, dark mode)
+- `tokens/common.css` — de semantische tokens (typografie-schaal, focus, viewport)
+- `tokens/<component>.css` — één bestand per component (`button.css`, `alert.css`, …)
+
+Laad altijd `brand.css` en `common.css`, plus de componenten die je gebruikt:
+
+```html
+<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/tokens/brand.css" />
+<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/tokens/common.css" />
+<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/tokens/button.css" />
+<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/tokens/heading.css" />
+```
+
+Alle chunk-bestanden gebruiken dezelfde theme-class als `index.css` (bijvoorbeeld `.rhc-theme`), dus de
+volgorde maakt niet uit en combineren met `index.css` kan geen kwaad. Een paar componenten verwijzen naar
+tokens van een ander component; die afhankelijkheden staan in `dist/tokens/manifest.json`
+(`dependencies`, bijvoorbeeld: wie `accordion.css` laadt, laadt ook `button.css`). Samen bevatten de
+chunks exact dezelfde custom properties als `index.css` — dat wordt bij elke build gecontroleerd.
+
+Met `pnpm report:usage` (na een build) genereer je een rapport (`dist/token-usage.report.md`) van tokens
+die door geen enkele consumer in dit monorepo of de onderliggende Utrecht/NLDS/Amsterdam CSS worden
+gebruikt — input voor toekomstige opschoning.
+
 ## Nieuw thema toevoegen
 
 Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd.
