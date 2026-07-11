@@ -12,7 +12,7 @@
     @include mixin.rhc-hero__heading;
   }
 
-  :where(&) .utrecht-img:where(:not(img[width])) {
+  & :where(.utrecht-img:not(img[width])) {
     inline-size: var(--rhc-hero-inline-size);
   }
 }
@@ -37,7 +37,7 @@
   @include mixin.rhc-hero__children;
 }
 
-:where(.rhc-hero__message) .utrecht-heading-group {
+.rhc-hero__message :where(.utrecht-heading-group) {
   @include mixin.rhc-hero__heading-group;
 }
 

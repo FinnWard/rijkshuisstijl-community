@@ -7,7 +7,7 @@
 
 .rhc-card-as-link {
   @include mixin.rhc-card-as-link;
-  :where(&) .utrecht-img:where(:not(img[width])) {
+  & :where(.utrecht-img:not(img[width])) {
     block-size: 100%;
     inline-size: 100%;
   }

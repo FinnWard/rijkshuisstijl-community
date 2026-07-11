@@ -33,13 +33,13 @@ const getSpacingMixins = (components) =>
     const prefix = mixinGroup[0].prefix;
 
     const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
-      return `.${component}:where(:has(+ .${sibling})) {
+      return `:where(.${component}:has(+ .${sibling})) {
   --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
 }`;
     });
 
     return `@mixin ${componentName} {
-  .${componentName}:where(:first-child) {
+  :where(.${componentName}:first-child) {
     --${prefix}-margin-block-start: 0;
   }
   ${mixins.join('\n  ')}
@@ -57,9 +57,6 @@ const getRichTextStyles = (components) => `
 
 .rhc-margin-block-end-wrapper {
 --utrecht-space-around: 1;
-}
-
-:where(.rhc-margin-block-end-wrapper) {
 ${components.map((mixinGroup) => `@include mixin.${mixinGroup[0].component}`).join(';\n')}
 }`;
 

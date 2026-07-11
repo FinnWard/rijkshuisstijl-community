@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-:where(.rhc-form-label--checkbox) .utrecht-form-field__label--checkbox {
+.rhc-form-label--checkbox :where(.utrecht-form-field__label--checkbox) {
   --utrecht-form-label-font-weight: var(--rhc-text-font-weight-regular, 400);
 
   align-items: flex-start;
@@ -20,7 +20,7 @@
   margin-block-end: var(--utrecht-form-field-margin-block-end);
 }
 
-:where(.rhc-form-field) .utrecht-form-field__status {
+.rhc-form-field :where(.utrecht-form-field__status) {
   grid-column-end: status;
   grid-column-start: status;
   grid-row-end: status;
@@ -29,7 +29,7 @@
   margin-block-start: var(--rhc-space-md);
 }
 
-:where(.rhc-form-field) .utrecht-form-field__description {
+.rhc-form-field :where(.utrecht-form-field__description) {
   --utrecht-form-field-description-margin-block-start: calc(-1 * var(--rhc-space-md));
 }
 

@@ -15,7 +15,7 @@
     @include mixin.rhc-link--any-link;
   }
 
-  :where(&.nl-link) .utrecht-icon,
+  &:where(.nl-link) :where(.utrecht-icon),
   &__icon {
     @include mixin.rhc-link__icon;
   }

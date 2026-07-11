@@ -8,9 +8,6 @@
 
 .rhc-margin-block-end-wrapper {
   --utrecht-space-around: 1;
-}
-
-:where(.rhc-margin-block-end-wrapper) {
   @include mixin.nl-heading--level-1;
   @include mixin.nl-heading--level-2;
   @include mixin.nl-heading--level-3;

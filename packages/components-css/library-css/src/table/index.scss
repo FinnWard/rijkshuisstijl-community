@@ -4,19 +4,19 @@
  */
 
 .rhc-table:where(.utrecht-table) {
-  :where(&) .utrecht-table__caption {
+  & :where(.utrecht-table__caption) {
     text-align: start;
   }
 
-  :where(&) .utrecht-table__caption--rtl {
+  & :where(.utrecht-table__caption--rtl) {
     text-align: end;
   }
 
-  :where(&) .utrecht-table__cell {
+  & :where(.utrecht-table__cell) {
     color: var(--rhc-color-foreground-lint);
   }
 
-  :where(&) .utrecht-table__header :where(tr:last-child) > :where(th) {
+  & :where(.utrecht-table__header) :where(tr:last-child) > :where(th) {
     border-block-end-color: var(--utrecht-table-header-border-block-end-color);
     border-block-end-style: solid;
     border-block-end-width: var(
@@ -25,27 +25,27 @@
     );
   }
 
-  :where(&) .utrecht-table__header--align-right {
+  & :where(.utrecht-table__header--align-right) {
     --_utrecht-table-cell-text-align: end;
   }
 
-  :where(&) .utrecht-table__header--align-center {
+  & :where(.utrecht-table__header--align-center) {
     --_utrecht-table-cell-text-align: center;
   }
 
-  :where(&) .utrecht-table__header--align-left {
+  & :where(.utrecht-table__header--align-left) {
     --_utrecht-table-cell-text-align: start;
   }
 
-  :where(&) .utrecht-table__header-cell {
+  & :where(.utrecht-table__header-cell) {
     --utrecht-table-cell-line-height: var(--rhc-text-line-height-md, inherit);
   }
 
-  :where(&) .utrecht-table__header--cell {
+  & :where(.utrecht-table__header--cell) {
     --utrecht-table-cell-line-height: var(--rhc-text-line-height-md, inherit);
   }
 
-  :where(&) .utrecht-table__header--cell-row {
+  & :where(.utrecht-table__header--cell-row) {
     --utrecht-table-header-cell-font-weight: --utrecht-table-row-border-block-end-width;
 
     border-block-end-color: var(--utrecht-table-row-border-block-end-color);
@@ -53,11 +53,11 @@
     border-block-end-width: var(--utrecht-table-row-border-block-end-width, var(--rhc-border-width-md));
   }
 
-  :where(&) .utrecht-table__footer {
+  & :where(.utrecht-table__footer) {
     color: var(--utrecht-table-footer-color);
   }
 
-  :where(&) .utrecht-table__footer :where(td) {
+  & :where(.utrecht-table__footer) :where(td) {
     --utrecht-table-footer-font-weight: var(--utrecht-table-footer-font-weight, bold);
 
     font-weight: var(--utrecht-table-footer-font-weight, bold);

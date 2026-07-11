@@ -4,11 +4,11 @@
  */
 
 .rhc-link-list {
-  :where(&) .utrecht-link-list__link {
+  & :where(.utrecht-link-list__link) {
     align-items: flex-start;
   }
 
-  :where(& .utrecht-link-list__link) .utrecht-icon {
+  & :where(.utrecht-link-list__link) :where(.utrecht-icon) {
     align-items: center;
     block-size: 1lh;
     display: flex;
@@ -16,13 +16,13 @@
     position: static;
   }
 
-  :where(&) .utrecht-link-list__item {
+  & :where(.utrecht-link-list__item) {
     display: inline-flex;
     font-family: var(--rhc-text-font-family-default, inherit);
     font-size: var(--utrecht-link-list-item-font-size, inherit);
   }
 
-  :where(& .utrecht-link-list__item) .utrecht-link:where(:any-link) {
+  & :where(.utrecht-link-list__item) :where(.utrecht-link:any-link) {
     line-height: var(--rhc-text-line-height-md, inherit);
   }
 }

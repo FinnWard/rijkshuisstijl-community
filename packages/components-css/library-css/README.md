@@ -54,16 +54,18 @@ Alle selectors in dit project hebben een specificiteit van precies **0,1,0** (é
 pseudo-element (`::before`/`::after`). Daardoor kun je als afnemer elke stijl overschrijven met één enkele class,
 zolang jouw CSS ná de design-system-CSS geladen wordt.
 
-De conventie: per selector blijft precies één class "live" — de class van het element dat gestyled wordt. Alle andere
-classes, attribuutselectors en pseudo-classes (ook states zoals `:hover` en `:focus`) staan in `:where()`, dat niet
-meetelt voor specificiteit maar wél gewoon matcht:
+De conventie: per selector blijft precies één class "live", en dat is **altijd een `rhc-*`-class**;
+Utrecht-/NL-classes staan altijd in `:where()`. Heeft het gestylede element zelf een rhc-class, dan blijft die live;
+zo niet, dan blijft de dichtstbijzijnde rhc-class in de selector (meestal een ancestor) live. Ook attribuutselectors
+en pseudo-classes (inclusief states zoals `:hover` en `:focus`) staan in `:where()`, dat niet meetelt voor
+specificiteit maar wél gewoon matcht:
 
 | Zonder conventie                            | Met conventie                                       |
 | ------------------------------------------- | --------------------------------------------------- |
-| `.rhc-hero__message .utrecht-heading-group` | `:where(.rhc-hero__message) .utrecht-heading-group` |
+| `.rhc-hero__message .utrecht-heading-group` | `.rhc-hero__message :where(.utrecht-heading-group)` |
 | `.rhc-card:active .rhc-card__heading`       | `:where(.rhc-card:active) .rhc-card__heading`       |
 | `.rhc-article.utrecht-article`              | `.rhc-article:where(.utrecht-article)`              |
-| `.nl-link:any-link`                         | `.nl-link:where(:any-link)`                         |
+| `.rhc-link.nl-link:any-link`                | `.rhc-link:where(.nl-link:any-link)`                |
 | `.rhc-hero--x:not(.rhc-hero--y)`            | `.rhc-hero--x:where(:not(.rhc-hero--y))`            |
 | genest `&:hover`                            | `&:where(:hover)`                                   |
 

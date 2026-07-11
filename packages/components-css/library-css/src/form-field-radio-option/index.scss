@@ -15,11 +15,11 @@
     grid-template-columns: min-content 1fr;
   }
 
-  :where(&) .utrecht-form-field__label {
+  & :where(.utrecht-form-field__label) {
     grid-area: label;
   }
 
-  :where(&) .utrecht-form-field__description {
+  & :where(.utrecht-form-field__description) {
     grid-area: description;
   }
 
@@ -29,7 +29,7 @@
     line-height: var(--rhc-text-line-height-md, inherit);
   }
 
-  :where(&.utrecht-form-field--radio) .utrecht-form-field__label {
+  &:where(.utrecht-form-field--radio) :where(.utrecht-form-field__label) {
     --utrecht-form-label-font-weight: var(--rhc-form-field-radio-option-font-weight, inherit);
 
     display: inline-flex;
