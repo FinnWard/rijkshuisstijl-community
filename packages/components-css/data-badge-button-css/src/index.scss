@@ -8,12 +8,12 @@
 .rhc-data-badge-button {
   @include mixin.rhc-data-badge-button;
 
-  &:hover {
+  &:where(:hover) {
     @include mixin.rhc-data-badge-button--hover;
   }
 
   &--focus-visible,
-  &:focus-visible {
+  &:where(:focus-visible) {
     @include mixin.rhc-data-badge-button--focus-visible;
   }
 

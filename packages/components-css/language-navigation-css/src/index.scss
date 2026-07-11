@@ -24,7 +24,7 @@
   @include mixin.rhc-language-navigation__list__item--html-li;
 }
 
-.rhc-language-navigation__link:focus-visible {
+.rhc-language-navigation__link:where(:focus-visible) {
   @include mixin.rhc-language-navigation__link--focus-visible;
 }
 
@@ -32,6 +32,6 @@
   @include mixin.rhc-language-navigation__link;
 }
 
-button.rhc-language-navigation__link {
+.rhc-language-navigation__link:where(button) {
   @include mixin.rhc-language-navigation__link--button;
 }

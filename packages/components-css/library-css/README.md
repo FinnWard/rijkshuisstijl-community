@@ -47,3 +47,29 @@ Zie het volgende voorbeeld om het thema "groen" toe te passen:
 ```
 
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
+
+## Specificiteit: maximaal 0,1,0 met `:where()`
+
+Alle selectors in dit project hebben een specificiteit van precies **0,1,0** (één class), eventueel aangevuld met een
+pseudo-element (`::before`/`::after`). Daardoor kun je als afnemer elke stijl overschrijven met één enkele class,
+zolang jouw CSS ná de design-system-CSS geladen wordt.
+
+De conventie: per selector blijft precies één class "live" — de class van het element dat gestyled wordt. Alle andere
+classes, attribuutselectors en pseudo-classes (ook states zoals `:hover` en `:focus`) staan in `:where()`, dat niet
+meetelt voor specificiteit maar wél gewoon matcht:
+
+| Zonder conventie                            | Met conventie                                       |
+| ------------------------------------------- | --------------------------------------------------- |
+| `.rhc-hero__message .utrecht-heading-group` | `:where(.rhc-hero__message) .utrecht-heading-group` |
+| `.rhc-card:active .rhc-card__heading`       | `:where(.rhc-card:active) .rhc-card__heading`       |
+| `.rhc-article.utrecht-article`              | `.rhc-article:where(.utrecht-article)`              |
+| `.nl-link:any-link`                         | `.nl-link:where(:any-link)`                         |
+| `.rhc-hero--x:not(.rhc-hero--y)`            | `.rhc-hero--x:where(:not(.rhc-hero--y))`            |
+| genest `&:hover`                            | `&:where(:hover)`                                   |
+
+De ingesloten upstream-CSS (Utrecht, NL Design System kandidaat, Amsterdam) staat in de cascade layer
+`rhc-upstream`. Ongelaagde regels — die van dit design system én die van afnemers — winnen daardoor altijd van
+upstream-CSS, ongeacht de specificiteit van de upstream-selectors.
+
+De limiet wordt afgedwongen met stylelint (`selector-max-specificity: "0,1,0"` voor `packages/components-css/**`);
+nieuwe selectors die de limiet overschrijden vallen de CI-lint af.

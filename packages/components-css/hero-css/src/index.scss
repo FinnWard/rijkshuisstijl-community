@@ -8,11 +8,11 @@
 .rhc-hero {
   @include mixin.rhc-hero;
 
-  .rhc-hero__heading {
+  :where(&) .rhc-hero__heading {
     @include mixin.rhc-hero__heading;
   }
 
-  .utrecht-img:not(img[width]) {
+  :where(&) .utrecht-img:where(:not(img[width])) {
     inline-size: var(--rhc-hero-inline-size);
   }
 }
@@ -37,39 +37,39 @@
   @include mixin.rhc-hero__children;
 }
 
-.rhc-hero__message .utrecht-heading-group {
+:where(.rhc-hero__message) .utrecht-heading-group {
   @include mixin.rhc-hero__heading-group;
 }
 
-.rhc-hero--text-align-start:not(.rhc-hero--custom-border-radius-corner) {
+.rhc-hero--text-align-start:where(:not(.rhc-hero--custom-border-radius-corner)) {
   @include mixin.rhc-hero--border-radius-corner-start-start;
 }
 
-.rhc-hero--text-align-start .rhc-hero__message {
+:where(.rhc-hero--text-align-start) .rhc-hero__message {
   @include mixin.rhc-hero__message--text-align-start;
 }
 
-.rhc-hero--text-align-end:not(.rhc-hero--custom-border-radius-corner) {
+.rhc-hero--text-align-end:where(:not(.rhc-hero--custom-border-radius-corner)) {
   @include mixin.rhc-hero--border-radius-corner-start-end;
 }
 
-.rhc-hero--text-align-end .rhc-hero__message {
+:where(.rhc-hero--text-align-end) .rhc-hero__message {
   @include mixin.rhc-hero__message--text-align-end;
 }
 
-.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-start-start {
+.rhc-hero--border-radius-corner-start-start:where(.rhc-hero--custom-border-radius-corner) {
   @include mixin.rhc-hero--border-radius-corner-start-start;
 }
 
-.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-start-end {
+.rhc-hero--border-radius-corner-start-end:where(.rhc-hero--custom-border-radius-corner) {
   @include mixin.rhc-hero--border-radius-corner-start-end;
 }
 
-.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-end-start {
+.rhc-hero--border-radius-corner-end-start:where(.rhc-hero--custom-border-radius-corner) {
   @include mixin.rhc-hero--border-radius-corner-end-start;
 }
 
-.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-end-end {
+.rhc-hero--border-radius-corner-end-end:where(.rhc-hero--custom-border-radius-corner) {
   @include mixin.rhc-hero--border-radius-corner-end-end;
 }
 
@@ -77,7 +77,7 @@
   @include mixin.rhc-hero__image;
 }
 
-.rhc-hero__image:not(img[height]) {
+.rhc-hero__image:where(:not(img[height])) {
   block-size: auto;
   inline-size: var(--rhc-hero-inline-size);
 }

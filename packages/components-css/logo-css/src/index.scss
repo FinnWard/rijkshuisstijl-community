@@ -13,8 +13,8 @@
   @include mixin.rhc-logo__image;
 }
 
-.rhc-logo__image .utrecht-icon,
-.rhc-logo__image .rhc-icon {
+:where(.rhc-logo__image) .utrecht-icon,
+:where(.rhc-logo__image) .rhc-icon {
   @include mixin.rhc-logo__icon;
 }
 

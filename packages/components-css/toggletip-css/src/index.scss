@@ -17,29 +17,29 @@
   @include mixin.rhc-toggletip__button;
 }
 
-.rhc-toggletip__summary .rhc-toggletip__button {
+:where(.rhc-toggletip__summary) .rhc-toggletip__button {
   // If button is not used standalone the summary should take precedence
   @include mixin.rhc-toggletip__button--no-pointer-events;
 }
 
-.rhc-toggletip__button:focus {
+.rhc-toggletip__button:where(:focus) {
   @include mixin.rhc-toggletip--focus;
 }
 
-.rhc-toggletip__button:hover {
+.rhc-toggletip__button:where(:hover) {
   @include mixin.rhc-toggletip--hover;
 }
 
-.rhc-toggletip__summary:focus .rhc-toggletip__button {
+:where(.rhc-toggletip__summary:focus) .rhc-toggletip__button {
   @include mixin.rhc-toggletip--focus;
 }
 
-.rhc-toggletip__summary:hover .rhc-toggletip__button {
+:where(.rhc-toggletip__summary:hover) .rhc-toggletip__button {
   @include mixin.rhc-toggletip--hover;
 }
 
-.rhc-toggletip:active .rhc-toggletip__button,
-.rhc-toggletip[open] .rhc-toggletip__button {
+:where(.rhc-toggletip:active) .rhc-toggletip__button,
+:where(.rhc-toggletip[open]) .rhc-toggletip__button {
   @include mixin.rhc-toggletip--active;
 }
 

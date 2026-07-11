@@ -13,11 +13,11 @@
   @include mixin.rhc-expandable-checkbox-group__summary;
 }
 
-.rhc-expandable-checkbox-group .rhc-expandable-checkbox-group__sr-only {
+:where(.rhc-expandable-checkbox-group) .rhc-expandable-checkbox-group__sr-only {
   @include mixin.rhc-expandable-checkbox-group__sr-only;
 }
 
-.rhc-expandable-checkbox-group__summary:focus-visible,
+.rhc-expandable-checkbox-group__summary:where(:focus-visible),
 .rhc-expandable-checkbox-group__summary--focus-visible {
   @include mixin.rhc-expandable-checkbox-group__summary--focus-visible;
 }

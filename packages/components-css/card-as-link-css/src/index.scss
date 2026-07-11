@@ -7,7 +7,7 @@
 
 .rhc-card-as-link {
   @include mixin.rhc-card-as-link;
-  .utrecht-img:not(img[width]) {
+  :where(&) .utrecht-img:where(:not(img[width])) {
     block-size: 100%;
     inline-size: 100%;
   }
@@ -17,7 +17,7 @@
   @include mixin.rhc-card-as-link__button;
 }
 
-.rhc-card-as-link div:empty {
+.rhc-card-as-link :where(div:empty) {
   @include mixin.rhc-card-as-link__empty-element;
 }
 
@@ -61,23 +61,23 @@
   @include mixin.rhc-card-as-link__content;
 }
 
-.rhc-card-as-link--horizontal .rhc-card-as-link__content {
+:where(.rhc-card-as-link--horizontal) .rhc-card-as-link__content {
   @include mixin.rhc-card-as-link--horizontal__content;
 }
 
-.rhc-card-as-link--horizontal .rhc-card-as-link__heading {
+:where(.rhc-card-as-link--horizontal) .rhc-card-as-link__heading {
   @include mixin.rhc-card-as-link--horizontal__heading;
 }
 
-.rhc-card-as-link--horizontal .rhc-card-as-link__image {
+:where(.rhc-card-as-link--horizontal) .rhc-card-as-link__image {
   @include mixin.rhc-card-as-link--horizontal__image;
 }
 
-.rhc-card-as-link--full-bleed .rhc-card-as-link__footer {
+:where(.rhc-card-as-link--full-bleed) .rhc-card-as-link__footer {
   @include mixin.rhc-card-as-link--full-bleed__footer;
 }
 
-.rhc-card-as-link--full-bleed .rhc-card-as-link__image {
+:where(.rhc-card-as-link--full-bleed) .rhc-card-as-link__image {
   @include mixin.rhc-card-as-link--full-bleed__image;
 }
 
@@ -89,38 +89,38 @@
   @include mixin.rhc-card-as-link__anchor;
 }
 
-.rhc-card-as-link:active {
+.rhc-card-as-link:where(:active) {
   @include mixin.rhc-card-as-link--active;
 }
 
-.rhc-card-as-link:active .rhc-card-as-link__heading {
+:where(.rhc-card-as-link:active) .rhc-card-as-link__heading {
   @include mixin.rhc-card-as-link__heading--active;
 }
 
-.rhc-card-as-link:active .rhc-card-as-link__link {
+:where(.rhc-card-as-link:active) .rhc-card-as-link__link {
   @include mixin.rhc-card-as-link__link--active;
 }
 
-.rhc-card-as-link--default:focus {
+.rhc-card-as-link--default:where(:focus) {
   @include mixin.rhc-card-as-link--default--focus;
 }
 
-.rhc-card-as-link:focus .rhc-card-as-link__heading {
+:where(.rhc-card-as-link:focus) .rhc-card-as-link__heading {
   @include mixin.rhc-card-as-link__heading--active;
 }
 
-.rhc-card-as-link:focus .rhc-card-as-link__link {
+:where(.rhc-card-as-link:focus) .rhc-card-as-link__link {
   @include mixin.rhc-card-as-link__link--focus;
 }
 
-.rhc-card-as-link--default:hover {
+.rhc-card-as-link--default:where(:hover) {
   @include mixin.rhc-card-as-link--default--hover;
 }
 
-.rhc-card-as-link:hover .rhc-card-as-link__heading {
+:where(.rhc-card-as-link:hover) .rhc-card-as-link__heading {
   @include mixin.rhc-card-as-link__heading--active;
 }
 
-.rhc-card-as-link:hover .rhc-card-as-link__link {
+:where(.rhc-card-as-link:hover) .rhc-card-as-link__link {
   @include mixin.rhc-card-as-link__link--hover;
 }

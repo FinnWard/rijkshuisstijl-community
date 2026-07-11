@@ -28,20 +28,20 @@
     padding-block-end: var(--rhc-sidenav-link-padding-block-end);
     padding-block-start: var(--rhc-sidenav-link-padding-block-start);
     text-decoration: var(--rhc-sidenav-link-text-decoration);
-    &[aria-current="page"] {
+    &:where([aria-current="page"]) {
       color: var(--rhc-sidenav-link-current-color);
       font-weight: var(--rhc-sidenav-link-current-font-weight);
     }
-    &:active {
+    &:where(:active) {
       color: var(--rhc-sidenav-link-active-color);
       text-decoration: var(--rhc-sidenav-link-active-text-decoration);
     }
-    &:focus {
+    &:where(:focus) {
       background-color: var(--rhc-sidenav-link-focus-background-color);
       color: var(--rhc-sidenav-link-focus-color);
       text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
     }
-    &:hover {
+    &:where(:hover) {
       color: var(--rhc-sidenav-link-hover-color);
       text-decoration: var(--rhc-sidenav-link-hover-text-decoration);
     }

@@ -3,7 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "@nl-design-system-candidate/paragraph-css/dist/paragraph.css";
+@use "sass:meta";
+
+@layer rhc-upstream {
+  @include meta.load-css("@nl-design-system-candidate/paragraph-css/dist/paragraph.css");
+}
 
 .rhc-paragraph {
   margin-block-end: var(--nl-paragraph-margin-block-end);

@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-.rhc-text-input.utrecht-textbox:focus {
+.rhc-text-input:where(.utrecht-textbox:focus) {
   border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
 }
-.rhc-text-input.utrecht-textbox--invalid:focus {
+.rhc-text-input:where(.utrecht-textbox--invalid:focus) {
   border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
 }
