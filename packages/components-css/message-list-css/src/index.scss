@@ -12,17 +12,17 @@
     &-content {
       @include mixin.rhc-message-list__item-content;
     }
-    &__label {
-      @include mixin.rhc-message-list__item__label;
+    &-label {
+      @include mixin.rhc-message-list__item-label;
     }
-    &__description {
-      @include mixin.rhc-message-list__item__description;
+    &-description {
+      @include mixin.rhc-message-list__item-description;
     }
-    &__meta-data {
-      @include mixin.rhc-message-list__item__meta-data;
+    &-meta-data {
+      @include mixin.rhc-message-list__item-meta-data;
     }
-    &__end-icon {
-      @include mixin.rhc-navigation-list__item__end-icon;
+    &-end-icon {
+      @include mixin.rhc-message-list__item-end-icon;
     }
   }
 }

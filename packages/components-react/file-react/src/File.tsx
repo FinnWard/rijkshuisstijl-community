@@ -61,7 +61,7 @@ export const File = ({
       })}
     >
       <div className="rhc-file__inner-container">
-        <div className="rhc-file__inner-container__sub">
+        <div className="rhc-file__inner-container-sub">
           <Link href={URL.createObjectURL(file)} target="_blank">
             <span className="rhc-file__name">{file.name}</span>
           </Link>

@@ -32,7 +32,7 @@
   justify-content: space-between;
 }
 
-@mixin rhc-file__inner-container__sub {
+@mixin rhc-file__inner-container-sub {
   display: flex;
   flex-direction: column;
   overflow: hidden;

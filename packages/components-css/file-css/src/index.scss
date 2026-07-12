@@ -21,8 +21,8 @@
   @include mixin.rhc-file__inner-container;
 }
 
-.rhc-file__inner-container__sub {
-  @include mixin.rhc-file__inner-container__sub;
+.rhc-file__inner-container-sub {
+  @include mixin.rhc-file__inner-container-sub;
 }
 
 .rhc-file--error {

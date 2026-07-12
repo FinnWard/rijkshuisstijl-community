@@ -6,14 +6,14 @@
 @use "mixin";
 @forward "@utrecht/pre-heading-css/dist/index.css";
 
-.rhc-heading-container {
-  @include mixin.rhc-heading-container;
+.rhc-pre-heading__container {
+  @include mixin.rhc-pre-heading__container;
 }
 
 .rhc-pre-heading {
   @include mixin.rhc-pre-heading;
 }
 
-.rhc-heading-container > *:not(.rhc-pre-heading) {
-  @include mixin.rhc-heading-container--child;
+.rhc-pre-heading__container > *:not(.rhc-pre-heading) {
+  @include mixin.rhc-pre-heading__container--child;
 }

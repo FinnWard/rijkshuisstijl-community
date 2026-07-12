@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@mixin rhc-heading-container {
+@mixin rhc-pre-heading__container {
   display: grid;
   grid-template-areas:
     "preheading"
@@ -14,6 +14,6 @@
   grid-area: preheading;
 }
 
-@mixin rhc-heading-container--child {
+@mixin rhc-pre-heading__container--child {
   grid-area: heading;
 }

@@ -29,20 +29,20 @@
  * - the regular page footer
  * - the subfooter (optional)
  */
-.rhc-page-footer-container {
-  @include mixin.rhc-page-footer-container;
+.rhc-page-footer__container {
+  @include mixin.rhc-page-footer__container;
 }
 
-.rhc-page-footer-layout {
-  @include mixin.rhc-page-footer-layout;
+.rhc-page-footer__layout {
+  @include mixin.rhc-page-footer__layout;
 
   :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
-    @include mixin.rhc-page-footer-layout--rich-text;
+    @include mixin.rhc-page-footer__layout--rich-text;
   }
 }
 
-.rhc-page-footer-layout > * {
-  @include mixin.rhc-page-footer-layout--child;
+.rhc-page-footer__layout > * {
+  @include mixin.rhc-page-footer__layout--child;
 }
 
 .rhc-page-footer__section,
@@ -50,8 +50,8 @@
   @include mixin.rhc-page-footer__section;
 }
 
-.rhc-page-subfooter-layout {
-  @include mixin.rhc-page-subfooter-layout;
+.rhc-page-footer__subfooter-layout {
+  @include mixin.rhc-page-footer__subfooter-layout;
 }
 
 .rhc-page-prefooter {

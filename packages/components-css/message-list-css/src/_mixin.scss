@@ -54,7 +54,7 @@
     "label description meta icon";
   grid-template-columns: 1fr 2fr auto auto;
 }
-@mixin rhc-message-list__item__label {
+@mixin rhc-message-list__item-label {
   --nl-paragraph-font-weight: var(--rhc-message-list-item-label-font-weight);
   --nl-paragraph-font-size: var(--rhc-message-list-item-label-font-size);
   --nl-paragraph-line-height: var(--rhc-message-list-item-label-line-height);
@@ -67,21 +67,21 @@
   grid-area: label;
   margin-block: 0;
 }
-@mixin rhc-message-list__item__description {
+@mixin rhc-message-list__item-description {
   --nl-paragraph-color: var(--rhc-color-foreground-subtle, inherit);
   --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
 
   grid-area: description;
   margin-block: 0;
 }
-@mixin rhc-message-list__item__meta-data {
+@mixin rhc-message-list__item-meta-data {
   --nl-paragraph-color: var(--rhc-color-foreground-subtle, inherit);
   --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
 
   grid-area: meta;
   margin-block: 0;
 }
-@mixin rhc-navigation-list__item__end-icon {
+@mixin rhc-message-list__item-end-icon {
   --utrecht-icon-color: var(--rhc-color-foreground-lint, inherit);
 
   grid-area: icon;
