@@ -3,17 +3,17 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-.rhc-heading-container {
-  display: grid;
-  grid-template-areas:
-    "preheading"
-    "heading";
+@use "mixin";
+@forward "@utrecht/pre-heading-css/dist/index.css";
+
+.rhc-pre-heading__container {
+  @include mixin.rhc-pre-heading__container;
 }
 
 .rhc-pre-heading {
-  grid-area: preheading;
+  @include mixin.rhc-pre-heading;
 }
 
-.rhc-heading-container > *:not(.rhc-pre-heading) {
-  grid-area: heading;
+.rhc-pre-heading__container > *:not(.rhc-pre-heading) {
+  @include mixin.rhc-pre-heading__container--child;
 }

@@ -56,7 +56,7 @@ export const Footer = ({
   tagline,
   ...restProps
 }: PropsWithChildren<FooterProps>) => (
-  <footer aria-labelledby={heading ? headingId : undefined} className="rhc-page-footer-container">
+  <footer aria-labelledby={heading ? headingId : undefined} className="rhc-page-footer__container">
     {preFooter && (
       <div className="rhc-page-prefooter">
         {preFooterMessage && <span className="rhc-page-prefooter__content">{preFooterMessage}</span>}
@@ -79,7 +79,7 @@ export const Footer = ({
             {heading}
           </Heading>
         ) : null}
-        <div className="rhc-page-footer-layout">
+        <div className="rhc-page-footer__layout">
           {tagline && (
             <div className="rhc-page-footer__tagline" key={'heading'}>
               <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
@@ -111,7 +111,7 @@ export const Footer = ({
         )}
       >
         <div className="utrecht-page-footer__content">
-          <div className="rhc-page-subfooter-layout">
+          <div className="rhc-page-footer__subfooter-layout">
             {subFooter}
             {backtotop && (
               <Link href="#main" onClick={scrollBackToTop}>

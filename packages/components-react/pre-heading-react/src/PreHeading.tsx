@@ -17,7 +17,7 @@ export interface PreHeadingProps extends UtrechtPreHeadingProps {
 
 export const PreHeading = ({ ref, children, heading, ...restProps }: PropsWithChildren<PreHeadingProps>) => {
   return (
-    <div className="rhc-heading-container" {...restProps}>
+    <div className="rhc-pre-heading__container" {...restProps}>
       {heading}
       <UtrechtPreHeading className={'rhc-pre-heading'} ref={ref}>
         {children}

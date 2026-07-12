@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@utrecht/form-field-css/dist/index.css";
+@forward "@utrecht/form-label-css/dist/index.css";
 
 .rhc-code-input {
   @include mixin.rhc-code-input;

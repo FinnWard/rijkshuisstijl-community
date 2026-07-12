@@ -42,7 +42,7 @@
   }
 }
 
-@mixin rhc-navigation-list__item__start-icon {
+@mixin rhc-navigation-list__item-start-icon {
   --utrecht-icon-color: var(--rhc-navigation-list-item-icon-start-color, var(--rhc-color-foreground-subtle));
 
   background-color: var(--rhc-navigation-list-item-icon-start-background-color, var(--rhc-color-wit));
@@ -66,7 +66,7 @@
   grid-template-columns: 1fr 1fr 1fr auto;
 }
 
-@mixin rhc-navigation-list__item__label {
+@mixin rhc-navigation-list__item-label {
   --nl-paragraph-color: var(--rhc-navigation-list-item-label-color, var(--rhc-color-foreground-lint));
   --nl-paragraph-font-family:
     var(--rhc-navigation-list-item-label-font-family, var(--rhc-text-font-family-default)), sans-serif;
@@ -78,7 +78,7 @@
 
   grid-area: label;
 }
-@mixin rhc-navigation-list__item__description {
+@mixin rhc-navigation-list__item-description {
   --nl-paragraph-color: var(--rhc-navigation-list-item-description-color, var(--rhc-color-foreground-subtle));
   --nl-paragraph-font-size: var(--rhc-navigation-list-item-description-font-size);
   --nl-paragraph-line-height: var(--rhc-navigation-list-item-description-line-height, inherit);
@@ -88,7 +88,7 @@
   grid-area: content;
 }
 
-@mixin rhc-navigation-list__item__end-icon {
+@mixin rhc-navigation-list__item-end-icon {
   --utrecht-icon-color: var(--rhc-navigation-list-item-icon-end-color, var(--rhc-color-foreground-subtle));
 
   align-self: center;
