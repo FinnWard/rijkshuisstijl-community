@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@utrecht/form-field-css": "1.5.1",
+    "@utrecht/form-label-css": "1.6.1",
     "chokidar-cli": "3.0.0"
   },
   "keywords": [

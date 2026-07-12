@@ -3,6 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@forward "@utrecht/figure-css/dist/index.css";
+
 .rhc-figure.utrecht-figure img {
   border-end-end-radius: var(--utrecht-figure-img-border-end-end-radius);
   border-end-start-radius: var(--utrecht-figure-img-border-end-start-radius);

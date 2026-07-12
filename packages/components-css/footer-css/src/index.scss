@@ -3,6 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@forward "@utrecht/page-footer-css/dist/index.css";
+@forward "@utrecht/link-list-css/dist/index.css";
+
 .rhc-page-footer {
   --_utrecht-link-state-text-decoration-color: currentColor;
   --nl-heading-level-1-color: currentColor;
