@@ -7,6 +7,7 @@ import { mergeLicenseComments } from './remove-duplicate-license.mjs';
 import { removeComments } from './remove-comments.mjs';
 import cssnano from 'cssnano';
 import { existsSync } from 'node:fs';
+import { extractOverview } from './extract-overview.mjs';
 
 const webpackStyleImporter = {
   findFileUrl(url) {
@@ -166,7 +167,28 @@ await buildStyles({
   optional: true,
 });
 
+const buildOverview = async ({ inputFile, outputFile }) => {
+  try {
+    const { name } = JSON.parse(await readFile('package.json', 'utf8'));
+    const css = await readFile(inputFile, 'utf8');
+    const overview = extractOverview(css, { packageName: name });
+
+    await mkdir(path.dirname(outputFile), { recursive: true });
+    await writeFile(outputFile, `${JSON.stringify(overview, null, 2)}\n`);
+
+    console.log(`✨ Component overview built successfully to ${outputFile}`);
+  } catch (error) {
+    console.error('🔥 Error building component overview:', error);
+    process.exit(1);
+  }
+};
+
 await buildTokens({
   inputFile: 'src/tokens.json',
   outputFile: 'dist/tokens.mjs',
+});
+
+await buildOverview({
+  inputFile: 'dist/index.css',
+  outputFile: 'dist/component-overview.json',
 });

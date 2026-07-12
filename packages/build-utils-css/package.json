@@ -14,11 +14,18 @@
     "directory": "packages/build-utils-css"
   },
   "bin": {
-    "build-css-package": "./src/index.mjs"
+    "build-css-package": "./src/index.mjs",
+    "collect-css-overviews": "./src/collect-overviews.mjs"
+  },
+  "scripts": {
+    "test": "vitest run"
   },
   "devDependencies": {
     "cssnano": "7.1.9",
     "postcss": "8.5.15",
-    "sass": "1.100.0"
+    "postcss-selector-parser": "7.1.4",
+    "postcss-value-parser": "4.2.0",
+    "sass": "1.100.0",
+    "vitest": "4.1.8"
   }
 }

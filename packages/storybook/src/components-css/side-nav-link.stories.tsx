@@ -3,7 +3,7 @@ import * as ReactStories from '../components-react/side-nav-link.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...mergeCssMeta(reactMeta),
+  ...mergeCssMeta(reactMeta, { parameters: { cssOverview: 'side-nav' } }),
   title: 'Side Navigation/Side Navigation Link',
   id: 'css-side-nav-link',
 };

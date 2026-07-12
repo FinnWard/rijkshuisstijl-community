@@ -19,6 +19,7 @@
     "directory": "packages/components-css"
   },
   "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
     "@utrecht/focus-ring-css": "2.3.1",
     "scss": "0.2.4",
     "vite": "7.3.5"
@@ -26,7 +27,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "generate": "node src/wrapper/createSpacingCSS.js && prettier --write ./src/wrapper",
-    "build": "pnpm run generate && pnpm run build:css",
+    "build": "pnpm run generate && pnpm run build:css && collect-css-overviews",
     "build:css": "vite build",
     "watch": "vite build --watch"
   },

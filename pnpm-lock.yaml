@@ -310,9 +310,18 @@ importers:
       postcss:
         specifier: 8.5.15
         version: 8.5.15
+      postcss-selector-parser:
+        specifier: 7.1.4
+        version: 7.1.4
+      postcss-value-parser:
+        specifier: 4.2.0
+        version: 4.2.0
       sass:
         specifier: 1.100.0
         version: 1.100.0
+      vitest:
+        specifier: 4.1.8
+        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-angular:
     dependencies:
@@ -966,6 +975,9 @@ importers:
         specifier: 1.5.1
         version: 1.5.1
     devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
       '@utrecht/focus-ring-css':
         specifier: 2.3.1
         version: 2.3.1
@@ -28549,9 +28561,9 @@ snapshots:
       obug: 2.1.3
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
     optionalDependencies:
-      '@vitest/browser': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)
+      '@vitest/browser': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
 
   '@vitest/expect@3.2.4':
     dependencies:
@@ -28585,6 +28597,7 @@ snapshots:
       magic-string: 0.30.21
     optionalDependencies:
       vite: 7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0)
+    optional: true
 
   '@vitest/mocker@4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))':
     dependencies:
@@ -37335,6 +37348,7 @@ snapshots:
       jsdom: 26.1.0
     transitivePeerDependencies:
       - msw
+    optional: true
 
   vitest@4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)):
     dependencies:

@@ -3,7 +3,7 @@ import * as ReactStories from '../components-react/link-list-link.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...mergeCssMeta(reactMeta),
+  ...mergeCssMeta(reactMeta, { parameters: { cssOverview: 'link-list' } }),
   title: 'Link List/Link List Link',
   id: 'css-link-list-link',
 };

@@ -3,7 +3,7 @@ import * as ReactStories from '../components-react/navigation-list-item.stories'
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...mergeCssMeta(reactMeta),
+  ...mergeCssMeta(reactMeta, { parameters: { cssOverview: 'navigation-list' } }),
   title: 'Navigation List/Navigation List Item',
   id: 'css-navigation-list-item',
 };

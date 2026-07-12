@@ -21,6 +21,22 @@ import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react-vite';
 import { Fragment } from 'react';
 import { StoryRootDecorator } from './StoryRootDecorator';
+import { CssComponentOverview } from '../src/doc-blocks/CssComponentOverview';
+
+// The CSS overview component name is derived from the story id (`css-<component>`), and can be
+// overridden with the `cssOverview` parameter (a component name, or `false` to disable).
+const getCssOverviewComponent = (cssOverviewParameter: any, componentId?: string): string | undefined => {
+  if (cssOverviewParameter === false) {
+    return undefined;
+  }
+  if (typeof cssOverviewParameter === 'string') {
+    return cssOverviewParameter;
+  }
+  if (cssOverviewParameter?.component) {
+    return cssOverviewParameter.component;
+  }
+  return componentId?.startsWith('css-') ? componentId.replace(/^css-/, '') : undefined;
+};
 
 const preview: Preview = {
   decorators: [
@@ -85,7 +101,10 @@ const preview: Preview = {
     },
     docs: {
       page: () => {
-        const storyParameters: any = useOf<'story'>('story')?.story?.parameters;
+        const story = useOf<'story'>('story')?.story;
+        const storyParameters: any = story?.parameters;
+
+        const cssOverviewComponent = getCssOverviewComponent(storyParameters?.cssOverview, story?.componentId);
         const parameterLabels = {
           nldesignsystem: 'NL Design System',
           figma: 'Figma',
@@ -113,6 +132,7 @@ const preview: Preview = {
             <Description />
             <Primary />
             <Controls />
+            {cssOverviewComponent && <CssComponentOverview component={cssOverviewComponent} />}
             {!storyParameters?.isPage && <Stories />}
           </>
         );

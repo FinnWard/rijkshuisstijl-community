@@ -3,7 +3,7 @@ import * as ReactStories from '../components-react/unorderedListItem.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...mergeCssMeta(reactMeta),
+  ...mergeCssMeta(reactMeta, { parameters: { cssOverview: 'unordered-list' } }),
   title: 'Unordered List/Unordered List Item',
   id: 'css-unordered-list-item',
 };
