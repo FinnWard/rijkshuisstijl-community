@@ -3,23 +3,18 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
 @forward "@utrecht/breadcrumb-nav-css/dist/index.css";
 @forward "@utrecht/link-css/dist/index.css";
 
-.rhc-breadcrumb-nav {
-  .utrecht-breadcrumb-nav__list {
-    align-items: center;
-  }
+.rhc-breadcrumb-nav .utrecht-breadcrumb-nav__list {
+  @include mixin.rhc-breadcrumb-nav__list;
+}
 
-  &__link {
-    &--current {
-      --utrecht-link-text-decoration: none;
+.rhc-breadcrumb-nav__link--current {
+  @include mixin.rhc-breadcrumb-nav__link--current;
+}
 
-      color: var(--rhc-breadcrumb-nav-link-current-color);
-    }
-
-    &--active {
-      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
-    }
-  }
+.rhc-breadcrumb-nav__link--active {
+  @include mixin.rhc-breadcrumb-nav__link--active;
 }
